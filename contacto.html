@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web profesional de Leonardo Martínez, consultor en productividad personal. Descubre sus servicios, testimonios y cómo contactarlo.">
+    <title>Leonardo Martínez | Consultor en Productividad</title>
+
+</head>
+<body>
+    <!-- Encabezado principal -->
+  <header>
+    <h1>Leonardo Martínez</h1>
+    <p>Consultor en Productividad Personal y Organizacional</p>
+  </header>
+
+  <!-- Navegación principal -->
+  <nav>
+    <a href="#bienvenida">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <!-- Sección de contacto con formulario -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <!-- Formulario de contacto funcional y validado -->
+      <form action="#procesar_formulario.php" method="post">
+        <!-- Campo de nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Campo de correo -->
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <!-- Campo de mensaje -->
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar mensaje</button>
+      </form>
+      <p>O escríbeme a: <a href="mailto:contacto@leonardomartinez.pro">contacto@leonardomartinez.pro</a></p>
+    </section>
+  </main>
+
+</body>
+</html>

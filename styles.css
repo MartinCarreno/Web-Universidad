@@ -1,0 +1,164 @@
+/* --------------- RESET Y BASE GENERAL --------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Aplicación explícita del modelo de caja */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* --------------- CABECERA --------------- */
+header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 2px solid #002244;
+  position: relative; /* ejemplo de posicionamiento relativo */
+}
+
+header::after {
+  content: "✨";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+/* --------------- NAVEGACIÓN --------------- */
+nav {
+  background-color: #ddd;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #003366;
+  color: white;
+  border-radius: 5px;
+}
+
+/* --------------- SECCIONES PRINCIPALES --------------- */
+main section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Aplicación del modelo de caja explícita */
+section > article {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #003366;
+}
+
+/* Selectores avanzados */
+article:first-child {
+  background-color: #f0f8ff;
+}
+
+article:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+
+
+/* --------------- FORMULARIO --------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #004080;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #002f5f;
+}
+
+/* --------------- PIE DE PÁGINA --------------- */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px;
+  color: #666;
+  padding: 15px;
+  background-color: #eaeaea;
+  border-top: 2px solid #ccc;
+}
+
+/* Pseudoelemento decorativo */
+footer::before {
+  content: "📍";
+  margin-right: 5px;
+}
+
+/* --------------- DISEÑO RESPONSIVO --------------- */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  body {
+    padding: 10px;
+  }
+}

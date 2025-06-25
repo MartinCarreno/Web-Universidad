@@ -6,6 +6,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   color: #333;
@@ -13,8 +17,13 @@ body {
   padding: 20px;
 }
 
+main {
+  max-width: 1200px;
+}
+
 /* --------------- CABECERA --------------- */
 header {
+  width: 100%;
   background-color: #003366;
   color: white;
   text-align: center;
@@ -35,6 +44,7 @@ header::after {
 
 /* --------------- NAVEGACIÓN --------------- */
 nav {
+  width: 100%;
   background-color: #ddd;
   padding: 12px;
   margin-bottom: 20px;
@@ -73,6 +83,8 @@ main section {
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
+
+
 /* Aplicación del modelo de caja explícita */
 section > article {
   padding: 15px;
@@ -92,6 +104,14 @@ article:nth-child(even) {
 
 
 /* --------------- FORMULARIO --------------- */
+
+.formulario{
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -130,9 +150,11 @@ button:hover {
 
 /* --------------- PIE DE PÁGINA --------------- */
 footer {
+  width: 100%;
   text-align: center;
   font-size: 0.9em;
   margin-top: 40px;
+  margin-bottom: 0;
   color: #666;
   padding: 15px;
   background-color: #eaeaea;
@@ -160,5 +182,10 @@ footer::before {
 
   body {
     padding: 10px;
+  }
+
+  /* Diseño de Formulario en formato Mobil */
+  .formulario {
+    width: 100%;
   }
 }

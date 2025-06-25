@@ -5,6 +5,10 @@
   box-sizing: border-box; /* Aplicación explícita del modelo de caja */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -83,21 +87,26 @@ main section {
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
-
+.exponentes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
 /* Aplicación del modelo de caja explícita */
-section > article {
+section > div {
   padding: 15px;
   margin-bottom: 15px;
   border-left: 4px solid #003366;
 }
 
 /* Selectores avanzados */
-article:first-child {
+div:first-child {
   background-color: #f0f8ff;
 }
 
-article:nth-child(even) {
+div:nth-child(even) {
   background-color: #fdfdfd;
 }
 
@@ -165,6 +174,73 @@ footer {
 footer::before {
   content: "📍";
   margin-right: 5px;
+}
+
+
+/* --------------- Boton Volver --------------- */
+.btn-volver-header {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #005fa3;
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.btn-volver-header:hover {
+  opacity: 1;
+  background: #003d6b;
+}
+
+/* --------------- Agenda --------------- */
+.contenido-agenda {
+  width: 100%;
+}
+
+/* --------------- Expositores --------------- */
+.contenido-exositores {
+  width: 100%;
+}
+
+/* --------------- Expositores / asistentes --------------- */
+
+.asistente, .expositor {
+  display: flex;
+  flex-direction: column;
+  
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+section > .asistente, section > .expositor {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #003366;
+}
+
+/* --------------- Eventos --------------- */
+
+.evento {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 /* --------------- DISEÑO RESPONSIVO --------------- */

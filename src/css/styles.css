@@ -196,6 +196,7 @@ footer::before {
   z-index: 1000;
   opacity: 0.8;
   transition: opacity 0.2s;
+  cursor: pointer;
 }
 .btn-volver-header:hover {
   opacity: 1;

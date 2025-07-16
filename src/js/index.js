@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+});
 
-  // Validación adicional (preventiva, sin backend)
+// Validación adicional (preventiva, sin backend)
   const form = document.querySelector("form");
   form.addEventListener("submit", (e) => {
     const nombre = document.getElementById("nombre").value.trim();
@@ -18,4 +19,3 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
     }
   });
-});
